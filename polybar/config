@@ -9,7 +9,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #cc000000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -162,6 +162,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
+ws-icon-2 = 3;
 ws-icon-default = ♟
 
 [module/mpd]

@@ -19,6 +19,13 @@ exec --no-startup-id compton
 bindsym $mod+Shift+d exec i3-dmenu-desktop
 bindsym $mod+Mod1+l exec i3lock && systemctl suspend
 
+
+# Resizing by 1
+bindsym $mod+Ctrl+Right resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+Up resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+Down resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+Left resize grow width 10 px or 10 ppt
+
 exec --no-startup-id setxkbmap us,el,de -option 'grp:alt_shift_toggle'
 exec --no-startup-id nm-applet
 # Pulse Audio controls
@@ -137,6 +144,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 assign [class="Firefox"] 1
 assign [class="Terminator"] 2
+assign [class="Telegram"] 3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
