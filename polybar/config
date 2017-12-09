@@ -42,20 +42,21 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
+; pacaur -S nerd-fonts-complete siji-git
+font-0 = Wuncon Siji:pixelsize=10;1
 ;font-0 = :size=10;0
-;font-1 = FontAwesome:size=10;0
-;font-2 = FontAwesome:size=10;0
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-1 = FontAwesome:size=10;0
+;font-3 = InconsolataLGC Nerd Font Mono:size=10;0
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-0 = Ubuntu Nerd Font:pixelsize=10;1
 ;font-1 = DroidSansMono Nerd Font:pixelsize=10;1
-font-3 = DroidSansMono Nerd Font:pixelsize=10;1
+font-3 = Ubuntu Nerd Font:pixelsize=10;1
 ;font-1 = Wuncon Siji:pixelsize=10;1
-font-2 = Wuncon Siji:pixelsize=10;1
+font-2 = Ubuntu Nerd Font:pixelsize=10;1
 
 modules-left = i3
-modules-center = 
-modules-right = xbacklight volume xkeyboard cpu wlan battery temperature date powermenu
+modules-center = date
+modules-right = volume xkeyboard cpu wlan temperature powermenu
 
 tray-position = right
 tray-padding = 2
@@ -109,7 +110,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
+label-focused = %index% %icon%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
@@ -139,25 +140,29 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %index%  %icon%
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %index%  %icon%
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %index%  %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %index%  %icon%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-default = ♟
 
 [module/mpd]
 type = internal/mpd
@@ -292,7 +297,7 @@ type = internal/volume
 
 format-volume = <ramp-volume>
 ; Only applies if <ramp-volume> is used
-ramp-volume-0 =  
+ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
@@ -316,32 +321,32 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 98
+;[module/battery]
+;type = internal/battery
+;battery = BAT0
+;adapter = ADP1
+;full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+;format-charging = <animation-charging> <label-charging>
+;format-charging-underline = #ffb52a
 
-format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+;format-discharging = <ramp-capacity> <label-discharging>
+;format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+;format-full-prefix = " "
+;format-full-prefix-foreground = ${colors.foreground-alt}
+;format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+;ramp-capacity-0 = 
+;ramp-capacity-1 = 
+;ramp-capacity-2 = 
+;ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
+;animation-charging-0 = 
+;animation-charging-1 = 
+;animation-charging-2 = 
+;animation-charging-foreground = ${colors.foreground-alt}
+;animation-charging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
