@@ -14,7 +14,8 @@ gaps inner 8
 gaps outer 2
 smart_gaps on
 new_window 1pixel
-exec --no-startup-id feh --bg-max --randomize ~/.wallpaper/*
+exec --no-startup-id feh --bg-scale --randomize ~/.wallpaper/*
+exec --no-startup-id compton
 bindsym $mod+Shift+d exec i3-dmenu-desktop
 bindsym $mod+Mod1+l exec i3lock && systemctl suspend
 
