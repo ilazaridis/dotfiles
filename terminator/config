@@ -1,0 +1,48 @@
+[global_config]
+  borderless = True
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  handle_size = 1
+  inactive_color_offset = 0.350649350649
+  title_hide_sizetext = True
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      directory = ~
+      fullscreen = True
+      last_active_term = 6ad84e23-f70e-49d4-bc95-d0e6e9531c04
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 1920, 1080
+      title = ilazaridis@nasty-monkey: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 538
+      ratio = 0.500465116279
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 959
+      ratio = 0.500783289817
+      type = HPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 959
+      ratio = 0.500783289817
+      type = HPaned
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.94
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
